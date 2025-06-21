@@ -76,8 +76,6 @@ mvn spring-boot:run
 | Method | Endpoint         | Description               |
 |--------|------------------|---------------------------|
 | GET    | `/products`      | Get all products          |
-| POST   | `/products`      | Create a new product      |
-| PUT    | `/products/{id}` | Update a product by ID    |
 | DELETE | `/products/{id}` | Delete a product by ID    |
 
 > Controller classes: `ProductRestApi`, `ProductsController`
