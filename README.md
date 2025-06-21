@@ -4,7 +4,8 @@
 This is the **Java Spring Boot backend** for the Angular Products application. It provides a RESTful API to manage products and is intended to work with the Angular frontend client.
 
 ---
-
+📌 Frontend Repo: [angular-products-ex-frontend](https://github.com/2BarrCoder/angular-products-ex-frontend)  
+🔗 Backend Repo: [angular-products-ex-backend](https://github.com/2BarrCoder/angular-products-ex-backend)
 ## 🚀 Features
 
 - RESTful API using Spring Boot
