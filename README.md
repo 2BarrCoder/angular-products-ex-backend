@@ -85,17 +85,12 @@ mvn spring-boot:run
 
 ## 🧪 Testing
 
-Run unit tests using:
-
-```bash
-mvn test
-```
-
 ---
 
-## 📝 License
-
-This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+![image](https://github.com/user-attachments/assets/ec568f33-744d-4f0f-aabe-72b61ad3bf32)
+![image](https://github.com/user-attachments/assets/5df04f70-e06f-4659-9888-d6d04be5d9d6)
+![image](https://github.com/user-attachments/assets/cc6ba8b3-57e6-4466-a040-72fed31a616a)
+![image](https://github.com/user-attachments/assets/7a5ac911-9b5b-4d8b-bd6e-2b7e93cbe03f)
 
 ---
 
