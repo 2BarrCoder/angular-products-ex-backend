@@ -1,37 +1,41 @@
 
-# 📦 Angular Products Backend API
+# 🧩 Angular Products Backend (Spring Boot)
 
-This project is a **Node.js + Express** backend for managing products via a RESTful API. It is designed to work alongside a frontend Angular application, providing full CRUD functionality with a MySQL database.
+This is the **Java Spring Boot backend** for the Angular Products application. It provides a RESTful API to manage products and is intended to work with the Angular frontend client.
 
 ---
 
 ## 🚀 Features
 
-- ✅ RESTful API for product management
-- ✅ Express.js server with modular structure
-- ✅ MySQL integration
-- ✅ CORS support for frontend communication
-- ✅ Ready for production or educational use
+- RESTful API using Spring Boot
+- Product CRUD operations
+- Integrated with a MySQL database
+- Layered architecture (Controller, Model, Repository)
+- Maven project with wrapper support
 
 ---
 
-## 📁 Project Structure
+## 🗂️ Project Structure
 
 ```
 angular-products-ex-backend/
-├── controller/
-│   └── productController.js    # Logic for handling requests
-├── model/
-│   └── db.js                   # MySQL DB configuration
-├── routes/
-│   └── productRoutes.js        # API routes for products
-├── server.js                   # Main server entry point
-└── package.json                # Project metadata and dependencies
+├── src/
+│   ├── main/
+│   │   ├── java/com/angularbackend/angularproductsbackend/
+│   │   │   ├── controller/       # REST API controllers
+│   │   │   ├── model/            # Product entity
+│   │   │   └── repository/       # JPA repository interface
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/                     # Unit tests
+├── pom.xml                       # Maven config file
+├── mvnw / mvnw.cmd              # Maven wrapper
+└── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Getting Started
 
 ### 1. Clone the Repository
 
@@ -40,78 +44,60 @@ git clone https://github.com/2BarrCoder/angular-products-ex-backend.git
 cd angular-products-ex-backend
 ```
 
-### 2. Install Dependencies
+### 2. Configure the Database
+
+Edit `src/main/resources/application.properties` to match your MySQL setup:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database
+spring.datasource.username=root
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+```
+
+### 3. Run the Application
+
+Using Maven wrapper:
 
 ```bash
-npm install
+./mvnw spring-boot:run
 ```
 
-### 3. Configure MySQL Database
-
-Edit `model/db.js` to match your MySQL configuration:
-
-```js
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'your_database_name'
-});
-```
-
-> Ensure that the database exists and matches your table structure.
-
-### 4. Start the Server
+Or with installed Maven:
 
 ```bash
-node server.js
-```
-
-Server will be running at: [http://localhost:8089](http://localhost:8089)
-
----
-
-## 📬 API Endpoints
-
-| Method | Endpoint         | Description           |
-|--------|------------------|-----------------------|
-| GET    | `/products`      | Retrieve all products |
-| POST   | `/products`      | Add a new product     |
-| PUT    | `/products/:id`  | Update an existing product |
-| DELETE | `/products/:id`  | Delete a product      |
-
-### 📦 Sample Request Payload
-
-```json
-{
-  "name": "Smartphone",
-  "description": "A modern device",
-  "price": 499.99
-}
+mvn spring-boot:run
 ```
 
 ---
 
-## 🛠 Technologies
+## 🔌 API Endpoints
 
-- Node.js
-- Express.js
-- MySQL
-- CORS
-- Body-parser
+| Method | Endpoint         | Description               |
+|--------|------------------|---------------------------|
+| GET    | `/products`      | Get all products          |
+| POST   | `/products`      | Create a new product      |
+| PUT    | `/products/{id}` | Update a product by ID    |
+| DELETE | `/products/{id}` | Delete a product by ID    |
+
+> Controller classes: `ProductRestApi`, `ProductsController`
 
 ---
 
-## 📘 Related Projects
+## 🧪 Testing
 
-- 🔗 [Angular Frontend for this API](https://github.com/2BarrCoder/angular-products-ex-frontend)
+Run unit tests using:
+
+```bash
+mvn test
+```
 
 ---
 
 ## 📝 License
 
-This project is licensed under the **MIT License**. Feel free to use, modify, and share.
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
 
 ---
 
-> Made with ❤️ by [2BarrCoder](https://github.com/2BarrCoder)
+> Created with ❤️ by [2BarrCoder](https://github.com/2BarrCoder)
